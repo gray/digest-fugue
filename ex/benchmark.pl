@@ -11,6 +11,7 @@ use Digest::BMW       ();
 use Digest::CubeHash  ();
 use Digest::ECHO      ();
 use Digest::Fugue     ();
+use Digest::JH        ();
 use Digest::Keccak    ();
 use Digest::Luffa     ();
 use Digest::MD5       ();
@@ -51,6 +52,10 @@ my %digests = (
     fugue_256    => sub { Digest::Fugue::fugue_256($data) },
     fugue_384    => sub { Digest::Fugue::fugue_384($data) },
     fugue_512    => sub { Digest::Fugue::fugue_512($data) },
+    jh_224       => sub { Digest::JH::jh_224($data) },
+    jh_256       => sub { Digest::JH::jh_256($data) },
+    jh_384       => sub { Digest::JH::jh_384($data) },
+    jh_512       => sub { Digest::JH::jh_512($data) },
     keccak_256   => sub { Digest::Keccak::keccak_256($data) },
     keccak_384   => sub { Digest::Keccak::keccak_384($data) },
     keccak_512   => sub { Digest::Keccak::keccak_512($data) },
