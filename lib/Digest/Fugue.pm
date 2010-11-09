@@ -150,7 +150,8 @@ Returns the algorithm used by the object.
 L<Digest>
 
 L<http://domino.research.ibm.com/comm/research_projects.nsf/pages/fugue.index.html>
-L<http://en.wikimedia.org/wikipedia/en/wiki/SHA-3>
+
+L<http://en.wikipedia.org/wiki/NIST_hash_function_competition>
 
 L<http://www.saphir2.com/sphlib/>
 

@@ -79,7 +79,7 @@ my %digests = (
     skein_256    => sub { Digest::Skein::skein_256($data) },
     skein_512    => sub { Digest::Skein::skein_512($data) },
     skein_1024   => sub { Digest::Skein::skein_1024($data) },
-    whirlpool    => sub { Digest->new('Whirlpool')->add($data)->digest },
+    whirlpool    => sub { Digest::Whirlpool->new->add($data)->digest },
 );
 
 my $times = timethese -1, \%digests, 'none';
