@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 19;
+use Test::More tests => 68;
 use Digest::Fugue qw(fugue_224 fugue_224_hex);
 
 my $len = 0;
@@ -23,15 +23,9 @@ while (my $line = <DATA>) {
             "fugue_224: $len bits of $msg"
         );
     }
-    else {
-        TODO:
-        eval {
-            local $TODO = 'add_bits is not yet implemented';
-            my $md = Digest::Fugue->new(224)->add_bits($data, $len)
-                ->hexdigest;
-            is($md, $digest, "new/add_bits/hexdigest: $msg");
-        };
-    }
+
+    my $md = Digest::Fugue->new(224)->add_bits($data, $len)->hexdigest;
+    is($md, $digest, "new/add_bits/hexdigest: $msg");
 }
 continue { $len++ }
 
