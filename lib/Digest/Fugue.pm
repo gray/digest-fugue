@@ -75,8 +75,8 @@ Digest::Fugue - Perl interface to the Fugue digest algorithm
     use Digest::Fugue qw(fugue_256 fugue_256_hex fugue_256_base64);
 
     $digest = fugue_256($data);
-    $digest = fugue_hex_256($data);
-    $digest = fugue_base64_256($data);
+    $digest = fugue_256_hex($data);
+    $digest = fugue_256_base64($data);
 
     # Object-oriented interface
     use Digest::Fugue;
