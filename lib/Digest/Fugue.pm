@@ -64,7 +64,8 @@ Digest::Fugue - Perl interface to the Fugue digest algorithm
 =head1 DESCRIPTION
 
 The C<Digest::Fugue> module provides an interface to the Fugue message
-digest algorithm. Fugue is a candidate in the NIST SHA-3 competition.
+digest algorithm. Fugue was a candidate in the NIST SHA-3 competition but
+did progress beyond round 2.
 
 This interface follows the conventions set forth by the C<Digest> module.
 
